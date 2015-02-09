@@ -1,8 +1,6 @@
 body {
   background-color: #566
 }
-
-
 .wrapper{
   display: inline-flex;
   flex-direction: row;

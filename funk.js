@@ -44,8 +44,8 @@ $(document).ready(function(){
   };
   $('.cssone').change(function() {
     current = "cssone";
-   decide($(this), cssQuestions);
- });
+    decide($(this), cssQuestions);
+  });
   $('.htmlone').change(function() {
     current = "htmlone";
     decide($(this), htmlQuestions);
