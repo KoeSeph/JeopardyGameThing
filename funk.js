@@ -1,11 +1,11 @@
 $(document).ready(function(){
-  var cssQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
-  var htmlQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
-  var howToQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
-  var randomQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
+  var cssQuestions = ['css thingerone','tcss thingertwo','css thingerthree','css thingerfour','css thingerfive','css thingersix'];
+  var htmlQuestions = ['html thingerone','htmlthingertwo','html thingerthree','html thingerfour','thtml thingerfive','thtmlthingersix'];
+  var howToQuestions = ['howto thingerone','test howto thingertwo','tehowto st thingerthree','testhowto  thingerfour','test howto thingerfive','test howto thingersix'];
+  var randomQuestions = ['random thingerone','random thingertwo','random thingerthree','trandom thingerfour','trandomhingerfive','tesrandomingersix'];
   var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
   var current = "";
-  var decide = function(elem) {
+  var decide = function(elem, figured) {
     var baseDiv = elem.parent();
     var chicken = baseDiv.parent();
     chicken.removeClass('noodle');
@@ -13,54 +13,54 @@ $(document).ready(function(){
     console.log(elem.val());
     switch(elem.val()){
       case '100':
-      alert(cssQuestions[0]);
+      alert(figured[0]);
       $("." + current + " option[value='100']").remove();
       return too = 2;
       break;
       case '200':
-      alert(cssQuestions[1]);
+      alert(figured[1]);
       $("." + current + " option[value='200']").remove();
       return too = 4;
       break;
       case '300':
-      alert(cssQuestions[2]);
+      alert(figured[2]);
       $("." + current + " option[value='300']").remove();
       return too = 6;
       break;
       case '400':
-      alert(cssQuestions[3]);
+      alert(figured[3]);
       $( "." + current + " option[value='400']").remove();
       return too = 8;
       break;
       case '500':
-      alert(cssQuestions[4]);
+      alert(figured[4]);
       $("." + current + " option[value='500']").remove();
       return too = 10;
       case '600':
-      alert(cssQuestions[5]);
+      alert(figured[5]);
       $("." + current + " option[value='600']").remove();
       return too = 10;
     };
   };
   $('.cssone').change(function() {
     current = "cssone";
-   decide($(this));
+   decide($(this), cssQuestions);
  });
   $('.htmlone').change(function() {
     current = "htmlone";
-    decide($(this));
+    decide($(this), htmlQuestions);
   });
   $('.newsone').change(function() {
     current = "newsone";
-    decide($(this));
+    decide($(this), newsQuestions);
   });
   $('.randomone').change(function() {
     curent = "randomone";
-    decide($(this));
+    decide($(this), randomQuestions);
   });
   $('.howtoone').change(function() {
     current = "howtoone";
-    decide($(this));
+    decide($(this), howToQuestions);
   });
 
 
