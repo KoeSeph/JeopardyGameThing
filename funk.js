@@ -32,30 +32,20 @@ $(document).ready(function(){
         baseDiv.prev().css('border-color', 'transparent');
         console.log(elem.val());
         switch(elem.val()){
-          case 'd2':
+          case '100':
           return too = 2;
           break;
-          case 'd4':
+          case '200':
           return too = 4;
           break;
-          case 'd6':
+          case '300':
           return too = 6;
           break;
-          case 'd8':
+          case '400':
           return too = 8;
           break;
-          case 'd10':
+          case '500':
           return too = 10;
-          break;
-          case 'd12':
-          return too = 12;
-          break;
-          case 'd20':
-          return too = 20;
-          break;
-          case 'd100':
-          return too = 100;
-          break;
         };
       };
       $('select').change(function() {
