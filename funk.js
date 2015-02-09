@@ -1,10 +1,18 @@
 $(document).ready(function(){
-  var cssQuestions = ['css thingerone','tcss thingertwo','css thingerthree','css thingerfour','css thingerfive','css thingersix'];
+  // These are the possible questions. 
+  // I built this for 30 questions, 6 on each subject.
+  var cssQuestions = ['css thingerone','tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
   var htmlQuestions = ['html thingerone','htmlthingertwo','html thingerthree','html thingerfour','thtml thingerfive','thtmlthingersix'];
   var howToQuestions = ['howto thingerone','test howto thingertwo','tehowto st thingerthree','testhowto  thingerfour','test howto thingerfive','test howto thingersix'];
   var randomQuestions = ['random thingerone','random thingertwo','random thingerthree','trandom thingerfour','trandomhingerfive','tesrandomingersix'];
   var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
+  // End questions
+
+  // The current variable is used to keep track of the current subject.
   var current = "";
+
+  // The decide function takes in two arguments, the element that is
+  // being triggeres, and the subject that is being modified by the function.
   var decide = function(elem, figured) {
     var baseDiv = elem.parent();
     var chicken = baseDiv.parent();
@@ -62,8 +70,6 @@ $(document).ready(function(){
     current = "howtoone";
     decide($(this), howToQuestions);
   });
-
-
   $(".hook").on('mouseleave', function(){
     $(this).addClass('noodle');
   });
