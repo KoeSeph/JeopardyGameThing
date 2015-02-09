@@ -1,4 +1,9 @@
 $(document).ready(function(){
+var cssQuestions = ['','','','','',''];
+var htmlQuestions = ['','','','','',''];
+var howToQuestions = ['','','','','',''];
+var randomQuestions = ['','','','','','']:
+var newsQuestions = ['','','','','','']:
 
 var decide = function(elem) {
   var baseDiv = elem.parent();
@@ -8,6 +13,7 @@ var decide = function(elem) {
   console.log(elem.val());
   switch(elem.val()){
     case '100':
+    $('')
     return too = 2;
     break;
     case '200':
@@ -28,17 +34,10 @@ var decide = function(elem) {
 $('select').change(function() {
   decide($(this));
 });
-$('.stubborn').on('click',listin);
 $('.rollin').on('click', function(){
   $('.stubborn').trigger('click');
 });
 $(".hook").on('mouseleave', function(){
   $(this).addClass('noodle');
 });
-$('.pepsi').on('click', function(){
-  $(this).parent().parent().remove();
-});
-
-
-
 });
