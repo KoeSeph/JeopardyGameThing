@@ -1,18 +1,18 @@
 $(document).ready(function(){
   // These are the possible questions. 
-  // I built this for 30 questions, 6 on each subject.
+  // I built this for 30 questions, 6 on each category.
   var cssQuestions = ['css thingerone','tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
   var htmlQuestions = ['html thingerone','htmlthingertwo','html thingerthree','html thingerfour','thtml thingerfive','thtmlthingersix'];
   var howToQuestions = ['howto thingerone','test howto thingertwo','tehowto st thingerthree','testhowto  thingerfour','test howto thingerfive','test howto thingersix'];
   var randomQuestions = ['random thingerone','random thingertwo','random thingerthree','trandom thingerfour','trandomhingerfive','tesrandomingersix'];
-  var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
+  var newsQuestions = ['','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
   // End questions
 
-  // The current variable is used to keep track of the current subject.
+  // The current variable is used to keep track of the current category.
   var current = "";
 
   // The decide function takes in two arguments, the element that is
-  // being triggeres, and the subject that is being modified by the function.
+  // being triggeres, and the category that is being modified by the function.
   var decide = function(elem, figured) {
     var baseDiv = elem.parent();
     var chicken = baseDiv.parent();
@@ -63,7 +63,7 @@ $(document).ready(function(){
     decide($(this), newsQuestions);
   });
   $('.randomone').change(function() {
-    curent = "randomone";
+    current = "randomone";
     decide($(this), randomQuestions);
   });
   $('.howtoone').change(function() {
