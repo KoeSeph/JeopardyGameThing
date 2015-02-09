@@ -21,6 +21,8 @@ var decide = function(elem) {
     break;
     case '500':
     return too = 10;
+    case '600':
+    return too = 10;
   };
 };
 $('select').change(function() {
