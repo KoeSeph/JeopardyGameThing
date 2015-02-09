@@ -2,8 +2,8 @@ $(document).ready(function(){
 var cssQuestions = ['','','','','',''];
 var htmlQuestions = ['','','','','',''];
 var howToQuestions = ['','','','','',''];
-var randomQuestions = ['','','','','','']:
-var newsQuestions = ['','','','','','']:
+var randomQuestions = ['','','','','',''];
+var newsQuestions = ['','','','','',''];
 
 var decide = function(elem) {
   var baseDiv = elem.parent();
@@ -13,7 +13,6 @@ var decide = function(elem) {
   console.log(elem.val());
   switch(elem.val()){
     case '100':
-    $('')
     return too = 2;
     break;
     case '200':
