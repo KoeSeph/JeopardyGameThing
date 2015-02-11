@@ -1,21 +1,23 @@
 $(document).ready(function(){
   // this is a randomizer for the questions. Never get the same question twice!(theoretically)
-  var cssquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
-  var pickincss = cssquestone[Math.floor(Math.random() * cssquestone.length)];
+
   // These are the possible questions. 
   // I built this for 30 questions, 6 on each category.
-  var cssQuestions = [pickincss,'tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
+  var cssQuestions = [pickin,'tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
   var htmlQuestions = ['html thingerone','htmlthingertwo','html thingerthree','html thingerfour','thtml thingerfive','thtmlthingersix'];
   var howToQuestions = ['howto thingerone','test howto thingertwo','tehowto st thingerthree','testhowto  thingerfour','test howto thingerfive','test howto thingersix'];
   var randomQuestions = ['random thingerone','random thingertwo','random thingerthree','trandom thingerfour','trandomhingerfive','tesrandomingersix'];
   var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
   // End questions
-
+  var cssquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
   // The current variable is used to keep track of the current category.
   var current = "";
-
+  function pickin(dogs){
+   var choseone = dogs[Math.floor(Math.random() * dogs.length)];
+   return choseone;
+  };
   // The decide function takes in two arguments, the element that is
-  // being triggeres, and the category that is being modified by the function.
+  // being triggered, and the category that is being modified by the function.
   var decide = function(elem, figured) {
     var baseDiv = elem.parent();
     var chicken = baseDiv.parent();
@@ -24,7 +26,8 @@ $(document).ready(function(){
     console.log(elem.val());
     switch(elem.val()){
       case '100':
-      alert(figured[0]);
+      var tellmebb = figured[0](cssquestone);
+      alert(tellmebb);
       $("." + current + " option[value='100']").remove();
       return too = 2;
       break;
