@@ -1,11 +1,14 @@
 $(document).ready(function(){
+  // this is a randomizer for the questions. Never get the same question twice!(theoretically)
+  var cssquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
+  var pickincss = cssquestone[Math.floor(Math.random() * cssquestone.length)];
   // These are the possible questions. 
   // I built this for 30 questions, 6 on each category.
-  var cssQuestions = ['css thingerone','tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
+  var cssQuestions = [pickincss,'tcss thingertwo','','css thingerfour','css thingerfive','css thingersix'];
   var htmlQuestions = ['html thingerone','htmlthingertwo','html thingerthree','html thingerfour','thtml thingerfive','thtmlthingersix'];
   var howToQuestions = ['howto thingerone','test howto thingertwo','tehowto st thingerthree','testhowto  thingerfour','test howto thingerfive','test howto thingersix'];
   var randomQuestions = ['random thingerone','random thingertwo','random thingerthree','trandom thingerfour','trandomhingerfive','tesrandomingersix'];
-  var newsQuestions = ['','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
+  var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
   // End questions
 
   // The current variable is used to keep track of the current category.
