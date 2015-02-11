@@ -10,6 +10,10 @@ $(document).ready(function(){
   var newsQuestions = ['test thingerone','test thingertwo','test thingerthree','test thingerfour','test thingerfive','test thingersix'];
   // End questions
   var cssquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
+  var htmlquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
+  var howtoquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
+  var randomquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
+  var newsquestone = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen'];
   // The current variable is used to keep track of the current category.
   var current = "";
   function pickin(dogs){
